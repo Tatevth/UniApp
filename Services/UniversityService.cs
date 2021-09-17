@@ -39,6 +39,19 @@ namespace UniApp.Services
                 }
             }
         }
+         public void Swap(List<StudentModel> students, List<TeacherModel> teacher)
+        {
+            for (int i = 0, j = 0; i < students.Count; i++, j++)
+            {
+                teacher[j]._students.Add(students[i]);
+                students[i]._teacher = teacher[j];
+
+                if (j == teacher.Count - 1)
+                {
+                    j = -1;
+                }
+            }
+        }
 
     }
 }
