@@ -12,6 +12,7 @@ namespace UniApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Vle");
             List<StudentModel> students = new List<StudentModel>();
             List<TeacherModel> teachers = new List<TeacherModel>();
 
