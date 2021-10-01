@@ -13,6 +13,7 @@ namespace UniApp.Models
             _id = id;
             _name = name;
             _age = age;
+            _students =new List<StudentModel>();
         }
         public int _id;
         public string _name;

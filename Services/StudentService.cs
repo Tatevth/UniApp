@@ -9,28 +9,28 @@ namespace UniApp.Services
 {
     class StudentService
     {
-        List<StudentModel> _student;  //create
+        List<StudentModel> _students;
         public StudentService()
         {
-            _student = new List<StudentModel>();
+            _students = new List<StudentModel>();
         }
         public void Add(StudentModel student)
         {
-            _student.Add(student);
+            _students.Add(student);
         }
         public void Update(StudentModel student)
         {
             StudentModel wrongStudent = null;
-            for (int i = 0; i < _student.Count; i++)
+            for (int i = 0; i < _students.Count; i++)
             {
-                if (_student[i]._id == student._id)
+                if (_students[i]._id == student._id)
                 {
-                    wrongStudent = _student[i];
+                    wrongStudent = _students[i];
                     break;
 
                 }
-                int wrongStudentIdx = _student.IndexOf(wrongStudent);
-                _student[wrongStudentIdx] = student;
+                int wrongStudentIdx = _students.IndexOf(wrongStudent);
+                _students[wrongStudentIdx] = student;
 
             }
 
@@ -38,24 +38,24 @@ namespace UniApp.Services
         public void Delete(int Id)
         {
             StudentModel studentfordelete = null;
-            for (int i = 0; i < _student.Count; i++)
+            for (int i = 0; i < _students.Count; i++)
             {
-                if (_student[i]._id == Id)
+                if (_students[i]._id == Id)
                 {
-                    studentfordelete = _student[i];
+                    studentfordelete = _students[i];
                     break;
                 }
-                _student.Remove(studentfordelete);
+                _students.Remove(studentfordelete);
             }
         }
         public StudentModel Get(int id)
         {
             StudentModel student = null;
-            for (int i = 0; i < _student.Count; i++)
+            for (int i = 0; i < _students.Count; i++)
             {
-                if (_student[i]._id == id)
+                if (_students[i]._id == id)
                 {
-                    student = _student[i];
+                    student = _students[i];
                     break;
                 }
             }
@@ -63,7 +63,7 @@ namespace UniApp.Services
         }
         public List<StudentModel> GetAll()
         {
-            return _student;
+            return _students;
         }
     }
 }

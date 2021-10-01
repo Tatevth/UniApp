@@ -9,7 +9,7 @@ namespace UniApp.Services
 {
     class TeacherService
     {
-        List<TeacherModel> _teachers;  //create
+        List<TeacherModel> _teachers;
         public TeacherService()
         {
             _teachers = new List<TeacherModel>();
